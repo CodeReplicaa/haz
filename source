@@ -1,0 +1,118 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Roblox but every second you get +1 HP", "DarkTheme")
+
+local Tab = Window:NewTab("Main")
+
+local Section = Tab:NewSection("$ harry#2149")
+
+Section:NewToggle("Autofarm", "Will Auto Complete The Obbies +100 Health", function(state)
+    if state then
+        -- AutoFarm On
+        _G.AutoFarm = true
+        while _G.AutoFarm == true do wait(0.50)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(45, -64.5, 4243, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        end
+    else
+        -- AutoFarm Off
+        _G.AutoFarm = false
+        while _G.AutoFarm == true do wait(0.50)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(45, -64.5, 4243, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        end
+    end
+end)
+
+Section:NewToggle("Auto Refill Health (Godmode)", "Auto Refills Your Health Basically Godmode", function(state)
+    if state then
+    -- AutoFillHealth
+    _G.AutoFillHealth = true
+    while _G.AutoFillHealth == true do wait()
+    local args = {
+        [1] = game:GetService("Players").LocalPlayer
+    }
+    
+    game:GetService("ReplicatedStorage").FillHealth:FireServer(unpack(args))
+end
+    else
+    -- AutoFillHealth
+    _G.AutoFillHealth = false
+    while _G.AutoFillHealth == true do wait()
+    local args = {
+        [1] = game:GetService("Players").LocalPlayer
+    }
+    
+    game:GetService("ReplicatedStorage").FillHealth:FireServer(unpack(args))
+end
+    end
+end)
+
+Section:NewButton("Reset", "Respawns You", function()
+    -- Respawn
+    local args = {
+        [1] = game:GetService("Players").LocalPlayer
+    }
+
+    game:GetService("ReplicatedStorage").ResetPlayer:FireServer(unpack(args))
+end)
+
+Section:NewSlider("WalkSpeed", "This Will Change How Fast Your Player Walks!", 250, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("JumpPower", "This Will Change How High Your Player Jumps!", 250, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local Tab = Window:NewTab("Teleport")
+
+local Section = Tab:NewSection("$ harry#2149")
+
+Section:NewButton("Spawn", "Teleports You To Spawn", function()
+    -- Rooftop
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7.76178217, 14.4955673, -13.6183081, -0.999944687, -4.18376003e-05, 0.0105196312, -6.88379669e-06, 0.999994457, 0.00332363206, -0.0105197132, 0.00332337595, -0.999939144)
+end)
+
+Section:NewButton("Rooftop", "Teleports You To The Rooftop", function()
+    -- Rooftop
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1.7913903, -91.5000229, 4096.79688, 0.0026574193, -1.75949844e-09, 0.999996483, -7.88215004e-09, 1, 1.7804509e-09, -0.999996483, -7.88685384e-09, 0.0026574193)
+end)
+
+Section:NewButton("Underground", "Teleports You To The Underground", function()
+    -- Rooftop
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22.0414162, 74.4955597, 73.7872238, -0.0143993981, 0.00384744862, 0.999888897, -2.5109648e-06, 0.999992609, -0.00384788378, -0.999896288, -5.7920468e-05, -0.0143992817)
+end)
+
+Section:NewButton("Bloxy Cola", "Teleports You To The Bloxy Cola Spawner", function()
+    -- Bloxy Cola
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(32.098278, 54.4999886, 102.884537, 0.999998391, -9.47356966e-08, 0.00180719118, 9.46279783e-08, 1, 5.96934271e-08, -0.00180719118, -5.95223142e-08, 0.999998391)
+end)
+
+Section:NewButton("Glock", "Teleports You To The Glock Spawner", function()
+    -- Glock TP
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(32.2978401, 15.567771, 102.574814, 0.99889493, 4.8552829e-05, 0.0469986238, 1.25010206e-06, 0.999999464, -0.00105947885, -0.0469986498, 0.0010583665, 0.998894393)
+end)
+
+Section:NewButton("Minigun", "Teleports You To The Minigun Spawner", function()
+    -- Minigun TP
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(31.689127, 34.8946228, 103.466705, 0.999053895, 0.000202221243, -0.0434882119, -1.31271108e-05, 0.999990523, 0.00434845034, 0.0434886776, -0.00434376532, 0.999044418)
+end)
+
+Section:NewButton("Finish Obby 1", "Finishes Obby 1", function()
+    -- Minigun TP
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-39.5, 39.5, 38.5, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+Section:NewButton("Finish Obby 2", "Finishes Obby 2", function()
+    -- Minigun TP
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-115, 10.5, 76, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+Section:NewButton("Finish Obby 3", "Finishes Obby 3", function()
+    -- Minigun TP
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-106, 63.5, -21, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+Section:NewButton("Finish Obby 4", "Finishes Obby 4", function()
+    -- Minigun TP
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(45, -64.5, 4243, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
