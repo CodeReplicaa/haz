@@ -67,12 +67,12 @@ local Tab = Window:NewTab("Teleport")
 
 local Section = Tab:NewSection("$ harry#2149")
 
-Section:NewButton("Spawn", "Teleports You To Spawn", function()
+Section:NewButton("Rooftop", "Teleports You To Spawn", function()
     -- Rooftop
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7.76178217, 14.4955673, -13.6183081, -0.999944687, -4.18376003e-05, 0.0105196312, -6.88379669e-06, 0.999994457, 0.00332363206, -0.0105197132, 0.00332337595, -0.999939144)
 end)
 
-Section:NewButton("Rooftop", "Teleports You To The Rooftop", function()
+Section:NewButton("Spawn", "Teleports You To The Rooftop", function()
     -- Rooftop
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1.7913903, -91.5000229, 4096.79688, 0.0026574193, -1.75949844e-09, 0.999996483, -7.88215004e-09, 1, 1.7804509e-09, -0.999996483, -7.88685384e-09, 0.0026574193)
 end)
